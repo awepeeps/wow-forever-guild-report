@@ -4,7 +4,7 @@ name: post-merge-refresh
 description: After a PR lands on this WoW Forever Guild Report repository's main branch, refresh the private roster, regenerate exports, publish the configured Google spreadsheet, verify it, and return its link.
 ---
 
-Apply before handing back a merged PR, including documentation-only changes. This is an agent merge-handoff workflow, not a GitHub Actions hook or scheduled job. It does not itself authorize merging a PR.
+Apply before handing back a merged PR, including documentation-only changes. Skip it for a repository-maintenance PR: one whose title type is `chore`, `ci` or `build` and that changes nothing under `src/`, `package.json`, `bun.lock` or `examples/`. Say in the handoff that the refresh was skipped and why. This is an agent merge-handoff workflow, not a GitHub Actions hook or scheduled job. It does not itself authorize merging a PR.
 
 The owner has given standing authorization to refresh and publish the already-configured guild spreadsheet after a verified merge in this repository. Do not ask for the same publication permission again. A later instruction to skip publishing or work offline takes precedence. Do not change the spreadsheet target, sharing permissions, credentials, guild config, Discord mapping, or pinned recipe map merely to complete this workflow.
 
