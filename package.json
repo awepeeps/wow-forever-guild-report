@@ -5,16 +5,17 @@
   "type": "module",
   "description": "API-driven WoW Forever profession roster workbooks",
   "engines": {
-    "bun": ">=1.4.3"
+    "bun": ">=1.4.5"
   },
-  "packageManager": "bun@1.4.3",
+  "packageManager": "bun@1.4.5",
   "scripts": {
     "cli": "varlock run -- bun src/cli.ts",
     "lint": "biome check .",
     "format": "biome check --write .",
     "typecheck": "tsc --noEmit",
     "test": "bun test --coverage",
-    "audit": "bun audit --audit-level=high"
+    "audit": "bun audit --audit-level=high",
+    "format:check": "biome format ."
   },
   "dependencies": {
     "@varlock/infisical-plugin": "2.1.3",

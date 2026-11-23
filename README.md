@@ -8,7 +8,7 @@ Canonical repository: [awepeeps/wow-forever-guild-report](https://github.com/awe
 
 ## Quick start
 
-Install Bun **1.4.3** and just **1.45.0**. Linux/macOS are supported; Windows users can use WSL.
+Install Bun **1.4.5** and just **1.59.0**. Linux/macOS are supported; Windows users can use WSL.
 
 ```sh
 just install

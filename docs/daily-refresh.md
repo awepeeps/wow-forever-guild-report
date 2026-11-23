@@ -53,7 +53,7 @@ This guard is intentionally conservative, including failures before any write.
 
 On Linux with systemd, save these files under `~/.config/systemd/user/`. Adjust the
 working directory and executable paths for your machine. No credentials belong
-in either unit. Bun 1.4.3, `just`, and `flock` must be on the service's PATH.
+in either unit. Bun 1.4.5, `just`, and `flock` must be on the service's PATH.
 
 ```ini
 # wow-forever-refresh.service
