@@ -4,7 +4,7 @@ on:
   # Dependabot-triggered pull_request runs get a read-only token, so labeling and
   # auto-merge need the base-repository context. This job never checks out code and
   # only runs for the Dependabot actor.
-  pull_request_target:  # zizmor: ignore[dangerous-triggers]
+  pull_request_target: # zizmor: ignore[dangerous-triggers]
     types: [opened, reopened, synchronize]
 
 permissions:
