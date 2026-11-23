@@ -33,7 +33,7 @@ Notes is human-owned: never import it from CSV/API/config. Google updates requir
 
 ## After landing a PR
 
-Whenever a PR is confirmed merged into this repository's main branch, automatically apply [post-merge-refresh](.agents/skills/post-merge-refresh/SKILL.md) before the final handoff, including docs-only PRs. The owner has authorized refreshing the existing private guild data, regenerating exports, publishing the already-configured spreadsheet and returning its clickable link without another permission request. Preserve human notes/manual tabs. Honor any later instruction to skip publishing or work offline. If refresh or publication fails, report the failure and link the existing sheet without claiming it was updated. The skill does not grant permission to merge a PR.
+Whenever a PR is confirmed merged into this repository's main branch, automatically apply [post-merge-refresh](.agents/skills/post-merge-refresh/SKILL.md) before the final handoff, including docs-only PRs. Skip it for repository-maintenance PRs: a PR whose title type is `chore`, `ci` or `build` and that changes nothing under `src/`, `package.json`, `bun.lock` or `examples/`. Those change tooling, not the exported data, so they do not publish; say in the handoff that the refresh was skipped and why. The owner has authorized refreshing the existing private guild data, regenerating exports, publishing the already-configured spreadsheet and returning its clickable link without another permission request. Preserve human notes/manual tabs. Honor any later instruction to skip publishing or work offline. If refresh or publication fails, report the failure and link the existing sheet without claiming it was updated. The skill does not grant permission to merge a PR.
 
 ## Git hooks
 
