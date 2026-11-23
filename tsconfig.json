@@ -17,5 +17,12 @@
     "allowImportingTsExtensions": true,
     "skipLibCheck": true
   },
-  "include": ["src/**/*.ts", "tests/**/*.ts", "scripts/**/*.ts"]
+  "include": ["src/**/*.ts", "tests/**/*.ts", "scripts/**/*.ts"],
+  // These three are byte-identical canonical copies from the owner tooling and
+  // are not edited here; `check()` keeps a parameter for its exported contract.
+  "exclude": [
+    "scripts/forbidden-files.ts",
+    "scripts/commit-msg.ts",
+    "scripts/deps-refresh.ts"
+  ]
 }

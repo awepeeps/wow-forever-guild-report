@@ -35,6 +35,12 @@ Notes is human-owned: never import it from CSV/API/config. Google updates requir
 
 Whenever a PR is confirmed merged into this repository's main branch, automatically apply [post-merge-refresh](.agents/skills/post-merge-refresh/SKILL.md) before the final handoff, including docs-only PRs. The owner has authorized refreshing the existing private guild data, regenerating exports, publishing the already-configured spreadsheet and returning its clickable link without another permission request. Preserve human notes/manual tabs. Honor any later instruction to skip publishing or work offline. If refresh or publication fails, report the failure and link the existing sheet without claiming it was updated. The skill does not grant permission to merge a PR.
 
+## Git hooks
+
+Hooks are installed once per checkout with `just hooks` and run through Lefthook, loading the
+shared jobs from `awepeeps/.github` at the `hooks-v2` tag. Agents never bypass them (C7.11):
+no `LEFTHOOK=0`, no `git commit --no-verify`, and no `lefthook-local.yml`.
+
 ## Checks and evidence
 
 Run `just install`, `just tools`, then `just check`; use `just demo` and `just env-check` for entrypoint/schema validation. Test behavior that can lose/corrupt data or leak credentials: endpoint paths, schemas, failed calls, notes movement, formula injection, credential requirements, and private file boundaries. Avoid tests that only match implementation wording. Validate XLSX changes with an independent reader when available.

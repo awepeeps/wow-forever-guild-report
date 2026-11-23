@@ -17,3 +17,6 @@ dist/
 *service_account*.json
 !examples/discord-map.json
 !.github/
+
+# Lefthook per-machine overrides. Never committed and never used by agents (C7.11).
+lefthook-local.yml
