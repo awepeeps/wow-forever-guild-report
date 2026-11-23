@@ -1,6 +1,6 @@
 # Working on WoW Forever Guild Report
 
-Use Bun 1.4.3 and `just` recipes. This is a CLI, not a hosted website. The public repository contains synthetic fixtures only; real guild rosters, Discord maps, credentials and exports live in ignored `.local/`, `.env.local`, and `output/`.
+Use Bun 1.4.5 and `just` recipes. This is a CLI, not a hosted website. The public repository contains synthetic fixtures only; real guild rosters, Discord maps, credentials and exports live in ignored `.local/`, `.env.local`, and `output/`.
 
 ## Code ownership and architecture
 

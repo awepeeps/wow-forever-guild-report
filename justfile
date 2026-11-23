@@ -12,8 +12,13 @@ tools:
 fmt:
     bun run format
 
+fmt-check:
+    bun run format:check
+
 lint:
     bun run lint
+    actionlint
+    zizmor .github/workflows
 
 typecheck:
     bun run typecheck
@@ -26,13 +31,15 @@ audit:
 
 secrets:
     bun scripts/check-publication.ts
-    .local/bin/gitleaks git --redact --no-banner
-    .local/bin/gitleaks dir . --redact --no-banner
+    bun scripts/secrets.ts
 
-check: lint typecheck test audit secrets
+check: fmt-check lint typecheck test audit
 
 hooks:
     git config --local core.hooksPath .githooks
+
+agent-files:
+    bun scripts/agent-files.ts
 
 env-check:
     bun x --no-install varlock load

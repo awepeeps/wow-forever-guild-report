@@ -1,0 +1,5 @@
+[tools]
+actionlint = "1.7.12"
+bun = "1.4.5"
+just = "1.59.0"
+zizmor = "1.32.0"
