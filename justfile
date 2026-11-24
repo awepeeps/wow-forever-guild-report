@@ -102,7 +102,7 @@ hook-pre-push:
 
 # The suite alone takes 31 s, so this covers formatting, lint and types.
 # Fast subset for pre-push (C7.10), under 30 seconds.
-pre-push-check: fmt-check lint typecheck
+pre-push-check: fmt-check lint typecheck test
 
 # Refresh locked dependencies when a manifest changed (post-checkout, post-merge).
 deps-refresh:
